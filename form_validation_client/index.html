@@ -1,0 +1,38 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+	<form method= "post">
+		<p>
+			Username: <br/>
+			<input type = "text" name = "uname" onblur="validate()" id = "uname">
+		</p>
+		<p>
+			Email: <br/>
+			<input type ="text" name ="email" id="email">
+		</p>
+		<p>
+			<input type ="submit" name = "submit" value ="register">
+		</p>
+	</form>
+	<script type="text/javascript">
+		function validate(){
+				var email = document.getElementById ("email");
+				var val = uname.value;
+				if(val === ""){
+					alert("Requred!");
+				}
+				else{
+					var pattern = /(^[a-zA-Z])([a-zA-Z0-9._]+)([a-zA-Z0-9]+$)/;
+					if(val.match(pattern)){
+						alert("Pattern Match!");
+					}
+					else{
+						alert("Pattern Invalid!");
+					}
+				}
+		}
+	</script>
+</body>
+</html>
